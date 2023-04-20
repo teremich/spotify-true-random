@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify true random</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Spotify true random</h1>
+    </header>
+    <main>
+        <ol>
+            <% for (let i=0; i < playlists.length; i++) { %>
+                <li>
+                    <div>
+                        <img src="<%= playlists[i].imgurl %>" />
+
+                        <a href="/playlist/<%= playlists[i].uri+'?token='+token %>">
+                            <%= playlists[i].name %>
+                        </a>
+                    </div>
+                </li>
+                <% } %>
+        </ol>
+    </main>
+</body>
+
+</html>
